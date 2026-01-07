@@ -1,6 +1,5 @@
 <html>
 <head>
-  
   <title>홈</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -9,7 +8,7 @@
   <div class="max-w-6xl mx-auto p-4">
     <!-- 상단 메뉴 -->
     <div class="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
-      <a href="index.html" class="font-extrabold">My Homepage</a>
+      <a href="index.html" class="font-extrabold tracking-tight">My Homepage</a>
       <div class="flex gap-2 text-sm font-semibold">
         <a href="index.html" class="rounded-xl bg-white/10 px-3 py-2">홈</a>
         <a href="calculator.html" class="rounded-xl px-3 py-2 hover:bg-white/10">계산기</a>
@@ -17,26 +16,115 @@
       </div>
     </div>
 
-    <!-- 메인 -->
+    <!-- 허브 헤더(간결한 소개 + 핵심 버튼) -->
     <div class="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6">
-      <h1 class="text-2xl font-extrabold">홈</h1>
-      <p class="mt-2 text-slate-300">
-        메뉴로 페이지를 이동할 수 있어요. (홈 / 계산기 / 자기소개)
-      </p>
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div>
+          <p class="text-xs font-semibold text-slate-400">HUB</p>
+          <h1 class="mt-2 text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <span class="text-emerald-300">OOO</span>의 개인 홈페이지
+          </h1>
+          <p class="mt-2 text-sm text-slate-300">
+            상단 메뉴 또는 아래 타일을 눌러 원하는 페이지로 이동할 수 있습니다.
+          </p>
+        </div>
 
-      <div class="mt-5 grid gap-3 sm:grid-cols-2">
-        <a href="calculator.html" class="rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-white/10">
-          <p class="text-sm font-bold">🧮 계산기</p>
-          <p class="mt-2 text-sm text-slate-300">직접 만든 계산기</p>
-          <p class="mt-3 text-sm font-bold text-emerald-300">열기 →</p>
-        </a>
-
-        <a href="about.html" class="rounded-2xl border border-white/10 bg-black/20 p-5 hover:bg-white/10">
-          <p class="text-sm font-bold">🙋 자기소개</p>
-          <p class="mt-2 text-sm text-slate-300">자기소개 페이지</p>
-          <p class="mt-3 text-sm font-bold text-emerald-300">열기 →</p>
-        </a>
+        <div class="flex flex-wrap gap-2">
+          <a href="about.html"
+             class="rounded-2xl bg-emerald-500 px-4 py-2 text-sm font-bold text-slate-950 hover:bg-emerald-400">
+            자기소개
+          </a>
+          <a href="calculator.html"
+             class="rounded-2xl bg-white/10 px-4 py-2 text-sm font-bold hover:bg-white/15">
+            계산기
+          </a>
+        </div>
       </div>
+
+      <!-- 짧은 정보 스트립 -->
+      <div class="mt-5 grid gap-2 sm:grid-cols-3">
+        <div class="rounded-2xl bg-black/20 p-4 ring-1 ring-white/10">
+          <p class="text-xs text-slate-400 font-semibold">Theme</p>
+          <p class="mt-1 text-sm font-bold">Dark</p>
+        </div>
+        <div class="rounded-2xl bg-black/20 p-4 ring-1 ring-white/10">
+          <p class="text-xs text-slate-400 font-semibold">CSS</p>
+          <p class="mt-1 text-sm font-bold">Tailwind</p>
+        </div>
+        <div class="rounded-2xl bg-black/20 p-4 ring-1 ring-white/10">
+          <p class="text-xs text-slate-400 font-semibold">Pages</p>
+          <p class="mt-1 text-sm font-bold">Home / About / Calculator</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메인 타일(허브 핵심) -->
+    <div class="mt-5 grid gap-3 lg:grid-cols-3">
+      <!-- About tile -->
+      <a href="about.html" class="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-400">ABOUT</p>
+            <h2 class="mt-2 text-xl font-extrabold tracking-tight">자기소개</h2>
+          </div>
+          <div class="rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold group-hover:bg-white/15">
+            →
+          </div>
+        </div>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+          사이드바 레이아웃과 프로필 사진을 포함한 소개 페이지입니다.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+          <span class="rounded-full bg-white/10 px-3 py-1">Sidebar</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Profile</span>
+        </div>
+      </a>
+
+      <!-- Calculator tile -->
+      <a href="calculator.html" class="group rounded-3xl border border-white/10 bg-white/5 p-6 hover:bg-white/10">
+        <div class="flex items-start justify-between">
+          <div>
+            <p class="text-xs font-semibold text-slate-400">PROJECT</p>
+            <h2 class="mt-2 text-xl font-extrabold tracking-tight">계산기</h2>
+          </div>
+          <div class="rounded-2xl bg-white/10 px-3 py-2 text-sm font-bold group-hover:bg-white/15">
+            →
+          </div>
+        </div>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+          기존 계산기 코드를 연결하고, 위치/색상 등을 다크 테마에 맞게 조정했습니다.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-semibold">
+          <span class="rounded-full bg-white/10 px-3 py-1">Layout</span>
+          <span class="rounded-full bg-white/10 px-3 py-1">Color</span>
+        </div>
+      </a>
+
+      <!-- Quick actions tile -->
+      <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+        <p class="text-xs font-semibold text-slate-400">QUICK</p>
+        <h2 class="mt-2 text-xl font-extrabold tracking-tight">바로가기</h2>
+        <p class="mt-3 text-sm text-slate-300">
+          자주 쓰는 동작만 짧게 모았습니다.
+        </p>
+
+        <div class="mt-4 grid gap-2 text-sm font-bold">
+          <a href="about.html" class="rounded-2xl bg-white/10 px-4 py-3 hover:bg-white/15">자기소개 열기</a>
+          <a href="calculator.html" class="rounded-2xl bg-white/10 px-4 py-3 hover:bg-white/15">계산기 열기</a>
+          <a href="index.html" class="rounded-2xl bg-white/10 px-4 py-3 hover:bg-white/15">홈 새로고침</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 아래 한 줄 안내(불필요한 내용 없이) -->
+    <div class="mt-5 rounded-3xl border border-white/10 bg-white/5 p-5">
+      <p class="text-sm text-slate-300">
+        ※ 모든 페이지는 상단 메뉴로 이동 가능하며, 스타일은 Tailwind CSS를 사용해 통일했습니다.
+      </p>
+    </div>
+
+    <div class="mt-6 text-center text-xs text-slate-500">
+      © My Homepage
     </div>
   </div>
 </body>
